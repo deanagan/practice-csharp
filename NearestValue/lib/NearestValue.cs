@@ -13,12 +13,8 @@ namespace lib
         }
         public int Compare(int a, int b)
         {
-            var result = Math.Abs(_search - a) - Math.Abs(_search - b);
-            if (result == 0)
-            {
-                return Math.Min(a,b);
-            }
-            return result;
+            var diff = Math.Abs(_search - a) - Math.Abs(_search - b);
+            return (diff == 0) ? Math.Min(a,b) : diff;
         }
     }
     public class NearestValue
