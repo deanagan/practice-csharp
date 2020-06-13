@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace lib
 {
@@ -6,7 +7,7 @@ namespace lib
     {
         public string ReplaceRightWithLeft(string[] inputs)
         {
-            return string.Empty;
+            return string.Join(",", inputs.Select(word => word.Replace("right", "left")));
         }
     }
 }
