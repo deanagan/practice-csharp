@@ -1,2 +1,1 @@
-# checkio-csharp
- A checkio solution repo
+# Practicing C#
