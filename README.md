@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/deanagan/practice-csharp.svg?branch=master)](https://travis-ci.com/github/deanagan/practice-csharp)
 # Practicing C#
 
 # To build and test
