@@ -1,3 +1,4 @@
+![.NET Core](https://github.com/deanagan/practice-csharp/workflows/.NET%20Core/badge.svg)
 [![Build Status](https://travis-ci.com/deanagan/practice-csharp.svg?branch=master)](https://travis-ci.com/github/deanagan/practice-csharp)
 # Practicing C#
 
