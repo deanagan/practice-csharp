@@ -15,6 +15,11 @@ namespace lib
                 {'(', ')' }
             };
 
+            // Parentheses always come in pairs.
+            if (s.Length % 2 != 0)
+            {
+                return false;
+            }
             var entries = new Stack<char>();
 
 
