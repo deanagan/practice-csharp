@@ -15,24 +15,26 @@ namespace lib
                 {'(', ')' }
             };
 
-            // Parentheses always come in pairs.
-            if (s.Length % 2 != 0)
-            {
-                return false;
-            }
             var entries = new Stack<char>();
 
 
             foreach(var ch in s)
             {
-                char key;
                 if (brackets.ContainsKey(ch))
                 {
                     entries.Push(ch);
                 }
-                else if (entries.Any() && (brackets.TryGetValue(entries.Peek(), out key) && (key == ch)))
+                else if (brackets.ContainsValue(ch))
                 {
-                    entries.Pop();
+                    char key;
+                    if (entries.Any() && (brackets.TryGetValue(entries.Peek(), out key) && (key == ch)))
+                    {
+                        entries.Pop();
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
 
