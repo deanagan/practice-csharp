@@ -20,7 +20,7 @@ namespace lib.test
             // Act
             var result = sp.SplitString(input);
             // Assert
-            result.Should().Equal(new List<string>(expected));
+            result.Should().Equal(expected);
         }
     }
 }
