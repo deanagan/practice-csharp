@@ -6,10 +6,10 @@ namespace lib
 {
     public class DisconnectedUsers
     {
-        private readonly Dictionary<string, string> _edges;
+        private readonly List<(string, string)> _edges;
         private readonly Dictionary<string, int> _lookUp;
 
-        public DisconnectedUsers(Dictionary<string, string> edges, Dictionary<string, int> lookUp)
+        public DisconnectedUsers(List<(string, string)> edges, Dictionary<string, int> lookUp)
         {
             _edges = edges;
             _lookUp = lookUp;
