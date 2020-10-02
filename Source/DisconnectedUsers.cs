@@ -51,15 +51,10 @@ namespace lib
                 var node = connected.Pop();
                 visited.Add(node.Name);
 
-                if (node.Connections.Count > 0) {
-                    foreach(var child in node.Connections)
-                    {
-                        if (!crushes.Contains(child.Name))
-                        {
-                            connected.Push(child);
-                        }
-                    }
-                }
+                node.Connections
+                    .Where(conn => !crushes.Contains(conn.Name))
+                    .ToList()
+                    .ForEach(n => connected.Push(n));
             }
 
             return nodeLookUp.Sum(kn => visited.Contains(kn.Value.Name) ? 0 : kn.Value.Count);
