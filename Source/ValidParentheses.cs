@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Collections.Generic;
 
 namespace lib
@@ -16,29 +15,20 @@ namespace lib
             };
 
             var entries = new Stack<char>();
-
-
+            entries.Push('\0');
             foreach(var ch in s)
             {
                 if (brackets.ContainsKey(ch))
                 {
-                    entries.Push(ch);
+                    entries.Push(brackets[ch]);
                 }
-                else if (brackets.ContainsValue(ch))
+                else if (brackets.ContainsValue(ch) && (ch != entries.Pop()))
                 {
-                    char key;
-                    if (entries.Any() && (brackets.TryGetValue(entries.Peek(), out key) && (key == ch)))
-                    {
-                        entries.Pop();
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return false;
                 }
             }
 
-            return !entries.Any();
+            return (entries.Count == 1) && (entries.First() == '\0');
         }
     }
 }
