@@ -32,8 +32,8 @@ namespace lib
             var total = 0;
             foreach (var number in _numbers)
             {
-                // We want to keep denom larger by adding a factor of 10
-                var invMod = (denom*(10*number/denom) - number) % denom;
+                var result = (denom - number) % denom;
+                var invMod = result < 0 ? result + denom : result;
                 total += counter.ContainsKey(invMod) ? counter[invMod] : 0;
                 counter.IncrementValueOrDefault(number % denom);
             }
