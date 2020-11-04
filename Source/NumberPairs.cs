@@ -5,7 +5,8 @@ namespace lib
 {
     public static class DictCounterExtension
     {
-        public static void IncrementValueOrDefault(this Dictionary<int,int> counter, int key)
+        // Increment value. If it does not exist, assume it is zero, so set to 1.
+        public static void IncrementValue(this Dictionary<int,int> counter, int key)
         {
             int value;
             if (counter.TryGetValue(key, out value))
@@ -35,7 +36,7 @@ namespace lib
                 var result = (denom - number) % denom;
                 var invMod = result < 0 ? result + denom : result;
                 total += counter.ContainsKey(invMod) ? counter[invMod] : 0;
-                counter.IncrementValueOrDefault(number % denom);
+                counter.IncrementValue(number % denom);
             }
 
             return total;
