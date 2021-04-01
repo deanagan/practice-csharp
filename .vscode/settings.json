@@ -3,5 +3,8 @@
         "**/.git": true,
         "**/bin": true,
         "**/obj": true,
-    }
+    },
+    "omnisharp.enableMsBuildLoadProjectsOnDemand": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.enableEditorConfigSupport": true,
 }
