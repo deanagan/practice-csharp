@@ -1,32 +1,20 @@
-using System;
-using System.Text.RegularExpressions;
 using System.Linq;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 
 namespace lib
 {
-    public class FourSumFinder
+    public class PermutationGenerator
     {
-        public IList<IList<int>> FourSum(int[] nums, int target)
+        public IList<IList<int>> GetPermutations(int[] nums)
         {
-            var result = new List<List<int>>();
-
-
-            foreach (var t in Permutations(nums))
-            {
-                //   if (t.)
-                Console.WriteLine(t);
-            }
-
-            return result.ToList<IList<int>>();
+            return Permutations(nums).ToList<IList<int>>();
         }
 
-        private ICollection<List<int>> Permutations(int[] nums)
+        private IEnumerable<List<int>> Permutations(int[] nums)
         {
             var result = new List<List<int>>();
             var permutation = new List<int>();
-            var usedMap = new List<bool>();
+            var usedMap = new List<bool>(nums.Select(v => false));
 
             PermutateWithBacktracking(result, nums, permutation, usedMap);
 
@@ -43,7 +31,7 @@ namespace lib
         {
             if (nums.Length == permutation.Count)
             {
-                result.Add(permutation);
+                result.Add(new List<int>(permutation));
                 return;
             }
 
@@ -52,14 +40,13 @@ namespace lib
                 if (!usedMap[i])
                 {
                     usedMap[i] = true;
+                    permutation.Add(nums[i]);
                     PermutateWithBacktracking(result, nums, permutation, usedMap);
                     usedMap[i] = false;
+                    permutation.RemoveAt(permutation.Count - 1);
                 }
             }
 
         }
-
-
-
     }
 }

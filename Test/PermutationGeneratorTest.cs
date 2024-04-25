@@ -3,21 +3,22 @@ using Xunit;
 using FluentAssertions;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace lib.test
 {
-    public class FourSumShould
+    public class PermutationGeneratorTest
     {
         [Theory]
-        [InlineData(new object[] { new int[] { 1, 2, 3 } })]
+        [InlineData(new object[] { new int[] { 1, 0, -1, 0, -2, 2 } })]
         public void BeEqualToExpected_WhenInputs(int[] nums)
         {
             // Arrange
-            var firstWord = new FourSumFinder();
+            var permutationGenerator = new PermutationGenerator();
             // Act
-            var result = firstWord.FourSum(nums, 0);
+            var result = permutationGenerator.GetPermutations(nums);
             // Assert
-            // result.Should().Be(expected);
+            // TBD
         }
     }
 }

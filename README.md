@@ -11,3 +11,5 @@ To run test verbose + logging: `dotnet test -l:"console;verbosity=detailed"`
 
 
 To run a specific test, do: dotnet test --filter FullyQualifiedName~MyNamespace.MyTestClass.MyTest
+Example:
+`dotnet test --filter lib.test.PermutationGeneratorTest`
