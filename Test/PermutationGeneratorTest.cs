@@ -10,7 +10,7 @@ namespace lib.test
     public class PermutationGeneratorTest
     {
         [Theory]
-        [InlineData(new object[] { new int[] { 1, 0, -1, 0, -2, 2 } })]
+        [InlineData([new int[] { 1, 0, -1, 0, -2, 2 }])]
         public void BeEqualToExpected_WhenInputs(int[] nums)
         {
             // Arrange

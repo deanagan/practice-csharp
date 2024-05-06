@@ -17,8 +17,8 @@ namespace lib.test
         }
 
         [Theory]
-        [InlineData(new object[] { new int[]{ 2, 7, 4, 3, 8}, 3 })]
-        [InlineData(new object[] { new int[] { 2, 4, 3, 7, 4, 5 }, 4 })]
+        [InlineData([new int[] { 2, 7, 4, 3, 8 }, 3])]
+        [InlineData([new int[] { 2, 4, 3, 7, 4, 5 }, 4])]
         public void ShouldReturnCorrectNumbers(int[] numbers, int expectedLength)
         {
             // Arrange

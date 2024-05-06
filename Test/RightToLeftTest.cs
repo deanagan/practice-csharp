@@ -7,10 +7,10 @@ namespace lib.test
     public class RightToLeftShould
     {
         [Theory]
-        [InlineData(new object[] {new string[]{"left", "right", "left", "stop"}, "left,left,left,stop"})]
-        [InlineData(new object[] {new string[]{"bright aright", "ok"}, "bleft aleft,ok"})]
-        [InlineData(new object[] {new string[]{"brightness wright"},"bleftness wleft"})]
-        [InlineData(new object[] {new string[]{"enough", "jokes"}, "enough,jokes"})]
+        [InlineData([new string[] { "left", "right", "left", "stop" }, "left,left,left,stop"])]
+        [InlineData([new string[] { "bright aright", "ok" }, "bleft aleft,ok"])]
+        [InlineData([new string[] { "brightness wright" }, "bleftness wleft"])]
+        [InlineData([new string[] { "enough", "jokes" }, "enough,jokes"])]
         public void ReplaceRightWithLeft_WhenGivenInputs(string[] inputs, string expected)
         {
             // Arrange

@@ -3,13 +3,14 @@ using FluentAssertions;
 
 namespace lib.test
 {
-    public class SubstringUtilityTest {
+    public class SubstringUtilityTest
+    {
 
         [Theory]
-        [InlineData(new object[] {"abcabcbb", 3})]
-        [InlineData(new object[] {"bbbbb", 1})]
-        [InlineData(new object[] {"pwwkew", 3})]
-        [InlineData(new object[] {"", 0})]
+        [InlineData(["abcabcbb", 3])]
+        [InlineData(["bbbbb", 1])]
+        [InlineData(["pwwkew", 3])]
+        [InlineData(["", 0])]
         public void ShouldReturnLongestSubstringLength(string text, int expectedLength)
         {
             // Arrange

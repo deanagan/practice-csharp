@@ -17,7 +17,7 @@ namespace lib.test
         }
 
         [Theory]
-        [InlineData(new object[]{new int[] {73, 67, 38, 33}, new int[] {75, 67, 40, 33} })]
+        [InlineData([new int[] { 73, 67, 38, 33 }, new int[] { 75, 67, 40, 33 }])]
         public void ShouldReturnCorrectGrades(int[] grades, int[] expected)
         {
             // Arrange

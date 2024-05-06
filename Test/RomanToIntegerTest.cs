@@ -6,9 +6,9 @@ namespace lib.test
     public class RomanToIntegerTest
     {
         [Theory]
-        [InlineData(new object[] { "III", 3 })]
-        [InlineData(new object[] { "LVIII", 58 })]
-        [InlineData(new object[] { "MCMXCIV", 1994 })]
+        [InlineData(["III", 3])]
+        [InlineData(["LVIII", 58])]
+        [InlineData(["MCMXCIV", 1994])]
         public void RomantToInteger_Equivalent_Number(string input, int expected)
         {
             // Arrange

@@ -7,13 +7,13 @@ namespace lib.test
     public class ValidParenthesesShould
     {
         [Theory]
-        [InlineData(new object[] {"()[]{}", true })]
-        [InlineData(new object[] {"(]", false })]
-        [InlineData(new object[] {"([)]", false })]
-        [InlineData(new object[] {"{[]}", true })]
-        [InlineData(new object[] {"){", false })]
-        [InlineData(new object[] {"]", false })]
-        [InlineData(new object[] {"(])", false })]
+        [InlineData(["()[]{}", true])]
+        [InlineData(["(]", false])]
+        [InlineData(["([)]", false])]
+        [InlineData(["{[]}", true])]
+        [InlineData(["){", false])]
+        [InlineData(["]", false])]
+        [InlineData(["(])", false])]
         public void BeEqualToExpected_WhenInputs(string input, bool expected)
         {
             // Arrange

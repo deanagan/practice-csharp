@@ -7,7 +7,7 @@ namespace lib.test
     public class PasswordHashingTest
     {
         [Theory]
-        [InlineData(new object[] {"hello"})]
+        [InlineData(["hello"])]
         public void ShouldReturnHashedPassword(string password)
         {
             // Arrange

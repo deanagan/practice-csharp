@@ -7,13 +7,13 @@ namespace lib.test
     public class FirstWordShould
     {
         [Theory]
-        [InlineData(new object[] {"Hello world", "Hello"})]
-        [InlineData(new object[] {" a word ",  "a"})]
-        [InlineData(new object[] {"don't touch it",  "don't"})]
-        [InlineData(new object[] {"greetings, friends",  "greetings"})]
-        [InlineData(new object[] {"... and so on ...",  "and"})]
-        [InlineData(new object[] {"hi",  "hi"})]
-        [InlineData(new object[] {"Hello.World",  "Hello"})]
+        [InlineData(["Hello world", "Hello"])]
+        [InlineData([" a word ", "a"])]
+        [InlineData(["don't touch it", "don't"])]
+        [InlineData(["greetings, friends", "greetings"])]
+        [InlineData(["... and so on ...", "and"])]
+        [InlineData(["hi", "hi"])]
+        [InlineData(["Hello.World", "Hello"])]
         public void BeEqualToExpected_WhenInputs(string input, string expected)
         {
             // Arrange
