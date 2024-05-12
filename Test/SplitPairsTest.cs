@@ -8,11 +8,11 @@ namespace lib.test
     public class SplitPairsTest
     {
         [Theory]
-        [InlineData(new object[] {"abcd", new string[]{"ab", "cd"} })]
-        [InlineData(new object[] {"abc", new string[]{"ab", "c_"} })]
-        [InlineData(new object[] {"abcdf", new string[]{"ab","cd", "f_"} })]
-        [InlineData(new object[] {"a", new string[]{"a_"} })]
-        [InlineData(new object[] {"", new string[]{} })]
+        [InlineData(["abcd", new string[] { "ab", "cd" }])]
+        [InlineData(["abc", new string[] { "ab", "c_" }])]
+        [InlineData(["abcdf", new string[] { "ab", "cd", "f_" }])]
+        [InlineData(["a", new string[] { "a_" }])]
+        [InlineData(["", new string[] { }])]
         public void ShouldGet_Correct_SplitUpList(string input, string[] expected)
         {
             // Arrange
