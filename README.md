@@ -1,5 +1,5 @@
 [![.NET](https://github.com/deanagan/practice-csharp/actions/workflows/dotnet.yml/badge.svg)](https://github.com/deanagan/practice-csharp/actions/workflows/dotnet.yml)
-[![Build Status](https://travis-ci.com/deanagan/practice-csharp.svg?branch=master)](https://travis-ci.com/github/deanagan/practice-csharp)
+[![Coverage Status](https://coveralls.io/repos/github/deanagan/csharp-design-patterns/badge.svg?branch=master)](https://coveralls.io/github/deanagan/csharp-design-patterns?branch=master)
 # Practicing C#
 
 # To build and test
